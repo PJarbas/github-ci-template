@@ -30,7 +30,7 @@ jobs:
         continue-on-error: false
       
       - name: Test with unittest
-        run: python -m unittest discover tests
+        run: coverage run --source tests/ -m unittest discover && coverage report
 
       # Runs a single command using the runners shell
       - name: Run a Python script
